@@ -2,11 +2,11 @@
   <mat-toolbar class="toolbar-top">
     <h1 routerLink="">S</h1>
     <div class="links">
-      <a routerLink="">Accueil</a>
-      <a routerLink="a-propos">A propos de moi</a>
-      <a routerLink="competences">Compétences</a>
-      <a routerLink="projets">Projets</a>
-      <a routerLink="">Contacts</a>
+      <a routerLink="home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
+      <a routerLink="a-propos" routerLinkActive="active">A propos de moi</a>
+      <a routerLink="competences" routerLinkActive="active">Compétences</a>
+      <a routerLink="projets" routerLinkActive="active">Projets</a>
+      <a routerLink="contacts" routerLinkActive="active">Contacts</a>
     </div>
     <button class="language" mat-icon-button>
       FR
@@ -20,7 +20,7 @@
       <mat-icon>facebook</mat-icon>
     </button>
     <button mat-icon-button class="social-media">
-      <mat-icon  >facebook</mat-icon>
+      <mat-icon  >twitter</mat-icon>
     </button>
     <button mat-icon-button class="social-media">
       <mat-icon>facebook</mat-icon>
