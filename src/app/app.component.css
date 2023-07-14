@@ -1,0 +1,54 @@
+h1{
+  margin: 0;
+  font-size: 60px;
+  color: #0080ff;
+  cursor: pointer;
+}
+
+.toolbar-top{
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.links{
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.links a{
+  color: #000;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.links a:hover{
+  color: #0080ff;
+}
+
+.language{
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #0080ff;
+}
+
+.language:hover{
+  color: #fff;
+  background-color: #0080ff;
+}
+
+.social-media{
+  background-color: #ebecf0;
+}
+
+.footer .toolbar-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+}
