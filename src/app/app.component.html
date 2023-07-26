@@ -6,7 +6,7 @@
       </button>
     </div>
     <mat-nav-list>
-        <a *ngFor="let category of categories" routerLink="/products/{{ category }}" mat-list-item>
+        <a *ngFor="let category of categories" (click)="goTo(category)" mat-list-item>
           <!-- <mat-icon matListItemIcon>home</mat-icon> -->
           {{ category }}
         </a>

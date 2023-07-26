@@ -1,0 +1,30 @@
+<div class="main">
+  <div class="container">
+    <div class="spinner" *ngIf="spinner">
+      <app-spinner></app-spinner>
+    </div>
+    <div class="card" *ngIf="!spinner">
+      <mat-card *ngFor="let product of products">
+        <div class="carte" routerLink="/details/{{ product.id }}">
+          <div class="card-top">
+            <img class="product-image" [src]="product.image">
+          </div>
+          <div class="card-middle">
+            {{ product.description }}
+          </div>
+          <div class="card-bottom">
+            <p class="price">{{ product.price }} Euro</p>
+          </div>
+        </div>
+        <button mat-raised-button color="primary">Ajouter</button>
+      </mat-card>
+    </div>
+  </div>
+  <div class="footer" *ngIf="!spinner">
+    <p>made by Stephane Affali - 07 59 60 27 15</p>
+    <p>&copy;<span> June 2022</span></p>
+  </div>
+</div>
+
+
+

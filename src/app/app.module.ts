@@ -11,6 +11,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { DetailsComponent } from './components/details/details.component';
 import { ElectronicsComponent } from './components/electronics/electronics.component';
+import { JeweleryComponent } from './components/jewelery/jewelery.component';
+import { MenComponent } from './components/men/men.component';
+import { WomenComponent } from './components/women/women.component';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { ElectronicsComponent } from './components/electronics/electronics.compo
     ProductComponent,
     SpinnerComponent,
     DetailsComponent,
-    ElectronicsComponent
+    ElectronicsComponent,
+    JeweleryComponent,
+    MenComponent,
+    WomenComponent
   ],
   imports: [
     BrowserModule,

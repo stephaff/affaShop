@@ -1,15 +1,15 @@
-import { Component, OnInit, SimpleChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import { Product } from 'src/app/product';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
-  selector: 'app-electronics',
-  templateUrl: './electronics.component.html',
-  styleUrls: ['./electronics.component.css']
+  selector: 'app-women',
+  templateUrl: './women.component.html',
+  styleUrls: ['./women.component.css']
 })
-export class ElectronicsComponent implements OnInit {
+export class WomenComponent {
 
-  category = 'electronics'
+  category = "women's clothing"
   products: Product[] = []
   spinner = false
 
