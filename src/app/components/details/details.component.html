@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="spinner" *ngIf="spinner">
+    <app-spinner></app-spinner>
+  </div>
+  <div class="card" *ngIf="!spinner">
+    <button mat-icon-button routerLink="/home">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <mat-card>
+      <div class="card-top">
+        <img [src]="product.image" class="product-image">
+      </div>
+      <div class="card-middle">
+        <p>{{ product.title }}</p>
+        <p>{{ product.category }}</p>
+        <p>{{ product.description }}</p>
+        <p>{{ product.price }} euro</p>
+        <!-- <p>{{ product.rating }}</p> -->
+      </div>
+      <button mat-raised-button color="primary">
+        <mat-icon matListItemIcon>shopping_cart</mat-icon>
+        Ajouter au panier
+      </button>
+    </mat-card>
+  </div>
+</div>

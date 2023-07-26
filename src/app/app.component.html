@@ -1,37 +1,34 @@
-<div class="toolbar">
-  <mat-toolbar class="toolbar-top">
-    <h1 routerLink="">S</h1>
-    <div class="links">
-      <a routerLink="home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
-      <a routerLink="a-propos" routerLinkActive="active">A propos de moi</a>
-      <a routerLink="competences" routerLinkActive="active">Compétences</a>
-      <a routerLink="projets" routerLinkActive="active">Projets</a>
-      <a routerLink="contacts" routerLinkActive="active">Contacts</a>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <div class="sidenav-header" align="end">
+      <button class="btn-close" mat-icon-button (click)="sidenav.close()">
+        <mat-icon>close</mat-icon>
+      </button>
     </div>
-    <button class="language" mat-icon-button>
-      FR
-    </button>
-  </mat-toolbar>
-</div>
-<router-outlet></router-outlet>
-<div class="footer">
-  <mat-toolbar class="toolbar-bottom">
-    <button mat-icon-button class="social-media">
-      <mat-icon>facebook</mat-icon>
-    </button>
-    <button mat-icon-button class="social-media">
-      <mat-icon  >twitter</mat-icon>
-    </button>
-    <button mat-icon-button class="social-media">
-      <mat-icon>facebook</mat-icon>
-    </button>
-    <button mat-icon-button class="social-media">
-      <mat-icon>facebook</mat-icon>
-    </button>
-  </mat-toolbar>
-</div>
-
-
-
-
-
+    <mat-nav-list>
+        <a *ngFor="let category of categories" routerLink="/products/{{ category }}" mat-list-item>
+          <!-- <mat-icon matListItemIcon>home</mat-icon> -->
+          {{ category }}
+        </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="mat-elevation-z5" color="primary">
+      <button mat-icon-button (click)="sidenav.open()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="spacer"></span>
+      <span routerLink="" class="logo">AffaShop</span>
+      <span class="spacer"></span>
+      <div class="btns-search-close">
+        <button mat-icon-button>
+          <mat-icon>person</mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

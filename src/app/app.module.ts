@@ -6,24 +6,27 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material/material.module';
 import { HomeComponent } from './components/home/home.component';
-import { AProposComponent } from './components/a-propos/a-propos.component';
-import { ProjetsComponent } from './components/projets/projets.component';
-import { CompetencesComponent } from './components/competences/competences.component';
-import { ContactsComponent } from './components/contacts/contacts.component';
+import { ProductComponent } from './components/product/product.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { DetailsComponent } from './components/details/details.component';
+import { ElectronicsComponent } from './components/electronics/electronics.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AProposComponent,
-    ProjetsComponent,
-    CompetencesComponent,
-    ContactsComponent
+    ProductComponent,
+    SpinnerComponent,
+    DetailsComponent,
+    ElectronicsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MaterialModule
   ],
   providers: [],
